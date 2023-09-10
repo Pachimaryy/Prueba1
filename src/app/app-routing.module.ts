@@ -11,6 +11,23 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'paquetes',
+    children: [{
+      path:"",
+      loadChildren: () => import('./paquetes/paquetes.module').then( m => m.PaquetesPageModule)
+    },
+    {
+      path:":paqueteId",
+      loadChildren: () => import('./paquetes/paquete-detail/paquete-detail.module').then(m => m.PaqueteDetailPageModule)
+    }
+      
+    ]
+  },
+  {
+    path: 'repartidores',
+    loadChildren: () => import('./repartidores/repartidores.module').then( m => m.RepartidoresPageModule)
+  },
 ];
 
 @NgModule({
