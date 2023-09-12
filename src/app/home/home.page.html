@@ -7,14 +7,47 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <h2>Bienvenido usuario</h2>
-    <h5>Que deseas visualizar?</h5>
-    <ion-button routerLink="/paquetes">Ver Paquetes
+  <ion-list>
+    <ion-card>
+      <h2>Bienvenido Admin</h2>
+      <ion-card>
+        <ion-datetime locale="en-GB" hourCycle="h12"></ion-datetime>
+      </ion-card>
+      <h5>Paquetes que estan en proceso</h5>
+      <ion-button routerLink="/paquetes">Ver Paquetes
+  
+      </ion-button>
+      <h5>Repartidores a cargo de los Paquetes</h5>
+      <ion-button routerLink="/repartidores">Ver Repartidores</ion-button>
+  
+  
+      <div></div>
+  
+      
+    </ion-card>
+    <ion-card color="light">
+      <ion-card-header>
+        <ion-card-title>Paquete añadido recientemente:</ion-card-title>
+        <ion-card-subtitle>Pelota de futbol</ion-card-subtitle>
+        <ion-img src="https://jumbo.vteximg.com.br/arquivos/ids/372936/Pelota-futbol-Barcelona-FC.jpg?v=637437361248630000"></ion-img>
+      </ion-card-header>
+    
+    </ion-card>
 
-    </ion-button>
-    <ion-button routerLink="/repartidores">Ver Repartidores</ion-button>
-  </ion-card>
+    <ion-card color="medium">
+      <ion-card-header>
+        <ion-card-title>Empleado del mes:</ion-card-title>
+        <ion-card-title>Vergil Chad</ion-card-title>
+        <ion-img src="https://media.discordapp.net/attachments/596794926688239617/1150919311628701756/F5J2LA2WkAAqvgy.jpg"></ion-img>
+      </ion-card-header>
+    
+      <ion-card-content>Nota: A entregado a tiempo record todos sus encargos</ion-card-content>
+    </ion-card>
+
+    
+  </ion-list>
+
+
 
   
 </ion-content>

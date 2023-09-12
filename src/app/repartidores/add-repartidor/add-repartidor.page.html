@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button slot="start" defaultHref="/repartidores"></ion-back-button>
+    <ion-title>Añadir Repartidor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-input placeHolder="Nombre" type="text" #nombre></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeHolder="Imagen del repartidor" type="text" #imageURL></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeHolder="Ingrese rut" type="text" #rut></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-input placeHolder="Ingrese el transporte" type="text" #transporte></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeHolder="Asigne paquetes de encargo" type="text" #carga></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeHolder="ingrese Comentarios" type="text" #comentarios></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeHolder="ingrese valoracion" type="text" #valoracion></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-button (click)="saveNewRepartidor(nombre,imageURL,rut,transporte,carga,comentarios)">Añadir Nuevo repartidor</ion-button>
+    </ion-item>
+  </ion-card>
+</ion-content>

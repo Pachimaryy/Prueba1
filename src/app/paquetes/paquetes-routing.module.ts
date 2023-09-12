@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'paquete-detail',
     loadChildren: () => import('./paquete-detail/paquete-detail.module').then( m => m.PaqueteDetailPageModule)
+  },
+  {
+    path: 'add-paquete',
+    loadChildren: () => import('./add-paquete/add-paquete.module').then( m => m.AddPaquetePageModule)
   }
 ];
 

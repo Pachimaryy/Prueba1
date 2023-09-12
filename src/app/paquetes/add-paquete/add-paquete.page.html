@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button slot="start" defaultHref="/paquetes"></ion-back-button>
+
+    <ion-title>Agregar paquete</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-input placeHolder="Que objeto llevara este paquete?" type="text" #objeto></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeHolder="Imagen del objeto" type="text" #imageURL></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeHolder="a que direccion va?" type="text" #direccion></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-button (click)="saveNewPaquete(objeto,imageURL,direccion)">Añadir Nueva entrega</ion-button>
+    </ion-item>
+  </ion-card>
+</ion-content>

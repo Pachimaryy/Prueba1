@@ -1,10 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-back-button slot="start" defaultHref="/home"></ion-back-button>
+    
     <ion-title>Paquetes</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
+
+
 <ion-content>
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="addNewPaquete();">
+      <ion-icon name = "add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  
   <ion-list>
     <ion-item *ngFor="let p of paquetes" [routerLink]="['/paquetes', p.id]">
       <ion-avatar slot="start">

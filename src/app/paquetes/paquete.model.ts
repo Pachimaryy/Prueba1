@@ -3,5 +3,6 @@ export interface Paquete{
     objeto: String;
     direccion: String;
     imageURL: String;
+    
 
 }

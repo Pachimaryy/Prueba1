@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button slot="start" defaultHref="/repartidores"></ion-back-button>
+    <ion-title>{{repartidor.nombre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          Nombre: {{repartidor.nombre}}
+        </ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>
+          Rut: {{repartidor.Rut}}
+        </ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>
+          Tipo de transporte: {{repartidor.transporte}}
+        </ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>
+          Valoracion: {{repartidor.valoracion}}
+        </ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>
+          Paquetes: {{repartidor.carga}}
+        </ion-label>
+      </ion-item>
+  
+      
+    </ion-list>
+  
+    <ion-img
+    [src]="repartidor.imageURL"
+    [alt]="repartidor.nombre"
+    ></ion-img>
+  </ion-card>
+
+  <ion-item>
+    <h1>COMENTARIOS</h1> 
+  </ion-item>
+
+  <ion-list>
+    <ion-label>
+      {{repartidor.comentarios}}
+    </ion-label>
+  </ion-list>
+    
+    
+</ion-content>
+
+

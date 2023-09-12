@@ -34,12 +34,12 @@ export class PaquetesService {
     return [...this.paquetes]
   }
 
-  getPaquete(paqueteid: any){
+  getPaquete(paqueteId: any){
     return {
       ...this.paquetes.find(paquete =>{
-        return paqueteid === paqueteid
+        return paquete.id === paqueteId;
       })
-    }
+    };
     
   }
 

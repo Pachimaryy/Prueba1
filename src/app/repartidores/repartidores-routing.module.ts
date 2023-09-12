@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: RepartidoresPage
+  },
+  {
+    path: 'repartidor-detail',
+    loadChildren: () => import('./repartidor-detail/repartidor-detail.module').then( m => m.RepartidorDetailPageModule)
+  },
+  {
+    path: 'add-repartidor',
+    loadChildren: () => import('./add-repartidor/add-repartidor.module').then( m => m.AddRepartidorPageModule)
   }
 ];
 

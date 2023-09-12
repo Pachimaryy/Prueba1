@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PaquetesService } from './paquetes.service';
 import { Paquete } from './paquete.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-paquetes',
@@ -15,11 +16,15 @@ export class PaquetesPage implements OnInit {
 
   
 
-  constructor(private paqueteService: PaquetesService) { }
+  constructor(private paqueteService: PaquetesService, private router:Router) { }
 
   ngOnInit() {
 
     this.paquetes = this.paqueteService.getPaquetes()
+  }
+
+  addNewPaquete(){
+    this.router.navigate(['/new-paquete']);
   }
 
 }

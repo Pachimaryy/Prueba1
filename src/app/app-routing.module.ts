@@ -20,14 +20,42 @@ const routes: Routes = [
     {
       path:":paqueteId",
       loadChildren: () => import('./paquetes/paquete-detail/paquete-detail.module').then(m => m.PaqueteDetailPageModule)
+    },
+    {
+      path:"new-paquete",
+      loadChildren: () => import('./paquetes/add-paquete/add-paquete-routing.module').then (m => m.AddPaquetePageRoutingModule)
     }
       
     ]
   },
   {
-    path: 'repartidores',
-    loadChildren: () => import('./repartidores/repartidores.module').then( m => m.RepartidoresPageModule)
+    path:"new-paquete",
+    loadChildren: () => import('./paquetes/add-paquete/add-paquete.module').then (m => m.AddPaquetePageModule)
   },
+  {
+    path:'new-repartidor',
+    loadChildren:() => import('./repartidores/add-repartidor/add-repartidor.module').then (m => m.AddRepartidorPageModule)
+  },
+  {
+    path: 'repartidores',
+    children: [{
+      path:"",
+      loadChildren: () => import('./repartidores/repartidores.module').then( m => m.RepartidoresPageModule)
+    },
+    {
+      path:":repartidorId",
+      loadChildren: () => import('./repartidores/repartidor-detail/repartidor-detail.module').then(m => m.RepartidorDetailPageModule)
+    },
+    {
+      path:'new-repartidor',
+      loadChildren: () => import('./repartidores/add-repartidor/add-repartidor-routing.module').then(m => m.AddRepartidorPageRoutingModule)
+    }
+
+    ]
+
+  },
+
+  
 ];
 
 @NgModule({

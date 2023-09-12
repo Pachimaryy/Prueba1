@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PaqueteDetailPageRoutingModule } from './paquete-detail-routing.module';
+import { AddRepartidorPageRoutingModule } from './add-repartidor-routing.module';
 
-import { PaqueteDetailPage } from './PaqueteDetailPage';
+import { AddRepartidorPage } from './add-repartidor.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PaqueteDetailPageRoutingModule
+    AddRepartidorPageRoutingModule
   ],
-  declarations: [PaqueteDetailPage]
+  declarations: [AddRepartidorPage]
 })
-export class PaqueteDetailPageModule {}
+export class AddRepartidorPageModule {}
